@@ -18,9 +18,9 @@ stages{
         steps {
             container('docker') {
                             sh """
-                            docker build . -t ee-dtr.sttproductions.de/sttproductions/webapp/k8s-webapp:${env.BUILD_ID}
+                            docker build . -t ee-dtr.sttproductions.de/sttproductions/webapp/k8s-:${env.BUILD_ID}
                             docker login -u devjenkins -p jenkins ee-dtr.sttproductions.de
-                            docker image push ee-dtr.sttproductions.de/sttproductions/webapp/k8s-webapp:${env.BUILD_ID}
+                            docker image push ee-dtr.sttproductions.de/sttproductions/webapp:k8s-${env.BUILD_ID}
                             """
                             }
                 }
