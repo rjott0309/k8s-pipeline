@@ -14,7 +14,7 @@ stages{
                 }
                 post {
                     success {
-                        echo 'All build...'
+                        junit '**/target/*.xml'
                     }
                 }
             }
