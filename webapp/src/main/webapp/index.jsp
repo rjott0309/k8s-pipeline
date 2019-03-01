@@ -1,1 +1,2 @@
-Whalecome to Docker!! Nice to see you!
+Whalecome to Docker Partner-Enablement!! 
+Nice to see you!
