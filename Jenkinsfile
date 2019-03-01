@@ -7,16 +7,11 @@ pipeline {
 stages{
         stage('Maven Build'){            
             steps {
-                
+                container('jenkins-slave') {
                     sh """
                     mvn clean package
                     """
-
-                post {
-                    success {
-                        junit '**/target/*.xml'
-                    }
-                }
+                }                
             }
         }
         stage('Docker Build') {
