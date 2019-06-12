@@ -18,9 +18,9 @@ stages{
         steps {
             container('docker') {
                             sh """
-                            docker build . -t YOURDTRURL/REPONAME-${env.BUILD_ID}
-                            docker login -u DTRUSER -p PASSWORD ee-dtr.sttproductions.de
-                            docker image push YOURDTRURL/REPONAME:k8s-${env.BUILD_ID}
+                            docker build . -t rjo-dtr.lab.capstonec.net/randy-${env.BUILD_ID}
+                            docker login -u randy -p Number3! ee-dtr.sttproductions.de
+                            docker image push rjo-dtr.lab.capstonec.net/randy:k8s-${env.BUILD_ID}
                             """
                             }
                 }
